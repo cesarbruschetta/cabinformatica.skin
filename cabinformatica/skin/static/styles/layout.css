@@ -1,0 +1,222 @@
+body{
+	margin:0;
+	padding:10px 0 0 0;
+	
+	font-family:verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	background-color:#999999;
+	}
+
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.nostart {list-style-type:none; margin:0; padding:0;}
+.clear{clear:both;}
+br.clear{clear:both; margin-top:-15px;}
+a{outline:none; text-decoration:none;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+.imgl, .imgr{border:1px solid #DFDFDF; padding:5px; color:#666666; background-color:#FFFFFF;}
+.imgl{float:left; margin:0 8px 8px 0; clear:left;}
+.imgr{float:right; margin:0 0 8px 8px; clear:right;}
+
+/* ----------------------------------------------Generalise-------------------------------------*/
+
+/*h1, h2, h3, h4, h5, h6{
+	margin:0 0 20px 0;
+	padding:0 0 8px 0;
+	font-size:20px;
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	border-bottom:1px dotted #DDDDDD;
+	}
+*/
+#header, #topbar, #featured_slide, #homecontent, #breadcrumb, #container, #footer, #copyright{
+	margin:0 auto 0;
+	display:block;
+	width:960px;
+	}
+
+.wrapper{
+	display:block;
+	width:920px;
+	padding:15px 10px;
+	color:#666666;
+	background-color:#FFFFFF;
+	border-left:10px solid #DFDFDF;
+	border-right:10px solid #DFDFDF;
+	}
+#viewlet-above-content{
+	display:none;
+}
+
+/* ----------------------------------------------Header-------------------------------------*/
+
+#header .wrapper{
+	border-top:10px solid #DFDFDF;
+	}
+
+#header h1, #header p{
+	margin:0;
+	padding:0;
+	}
+
+#header .fl_left{
+	display:block;
+	float:left;
+	width:400px;
+	margin:5px 0 0 0;
+	}
+
+#header .fl_right{
+	display:block;
+	float:right;
+	width:468px;
+	}
+
+#header h1{
+	margin:0;
+	font-size:36px;
+	border:none;
+	}
+
+#header h1 a{
+	color:#059BD8;
+	background-color:#FFFFFF;
+	}
+
+#logo{
+	margin-top:-10px;
+}
+
+#portal-logo{
+	margin:0px;
+}
+
+#login{
+	margin-top:-17px;
+}
+
+/* ----------------------------------------------Topbar-------------------------------------*/
+
+#topbar .wrapper{
+	padding:0 10px;
+	}
+
+#topbar #search{
+	display:block;
+	float:right;
+	width:251px;
+	height:36px;
+	margin:0;
+	padding:8px 5px 0 3px;
+	color:#FFFFFF;
+	background-color:#000000;
+	border-left:1px dotted #666666;
+	overflow:hidden;
+	}
+
+/* ----------------------------------------------BreadCrumb-------------------------------------*/
+
+#breadcrumb .wrapper{
+	padding:15px 10px;
+	border-bottom:1px solid #CCCCCC;
+	font-size:12px;
+	}
+
+#breadcrumb a{
+	color:#666666;
+	background-color:#FFFFFF;
+	text-decoration:underline;
+	}
+
+#breadcrumb ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#breadcrumb ul li{display:inline;}
+#breadcrumb ul li.current a{text-decoration:underline;}
+
+/* ----------------------------------------------Content-------------------------------------*/
+
+#container .wrapper{
+	float:left;
+	padding:20px search10px;
+	line-height:1.4em;
+	color:#666666;
+	background-color:#F5F5F5;
+	}
+
+/* ----------------------------------------------Footer-------------------------------------*/
+
+#footer .wrapper{
+	padding:20px;
+	border:none;
+	color:#98989A;
+	background-color:#2F2F2F;
+	font-size:12px;
+	}
+
+#footer a{
+	color:#059BD8;
+	background-color:#2F2F2F;
+	}
+
+#footer h2{
+	padding-bottom:8px;
+	border-bottom:1px dotted #999999;
+	}
+
+
+#footer .footbox{
+	display:block;
+	width:220px;
+	margin:0 auto 0 auto;
+	padding:0;
+	}
+
+#footer #box-dir{
+	width:620px;
+	float:left;
+}
+
+#newsletter{
+	display:block;
+	float:left;
+	width:300px;
+	}
+
+/* ----------------------------------------------Copyright-------------------------------------*/
+
+#copyright .wrapper{
+	padding:10px 20px;
+	border:none;
+	}
+
+#copyright p{
+	margin:0;
+	padding:0;
+	}
+
+#copyright .wrapper, #copyright a{
+	color:#FFFFFF;
+	background-color:#3D3D3D;
+	}
+
+#copyright a{
+	text-decoration:underline;	
+}	
+#sobre {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+}		

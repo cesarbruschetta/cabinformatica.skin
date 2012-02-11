@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<rules xmlns="http://namespaces.plone.org/diazo" 
+	   xmlns:css="http://namespaces.plone.org/diazo/css" 
+	   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<!-- Prevent theme usage in zmi -->
+    <rules css:if-content="#visual-portal-wrapper">
+	
+		<theme href="theme.html" />
+	</rules>
+    
+	<!-- Pull in Plone CSS -->
+    <prepend theme="/html/head" 
+		 	 content="/html/head/link | /html/head/style | /html/head/script | /html/head/title | /html/head/base | /html/head/meta" />
+	
+	<!-- Logo -->
+	<copy css:content="#portal-logo" css:theme="#logo" />
+	
+	<!-- Login User -->
+	<copy css:content="#portal-personaltools-wrapper" css:theme="#login" />
+	
+	<!-- Busca -->
+	<copy css:content="#portal-searchbox" css:theme="#search" />
+	
+	<!-- Menu do Portal -->
+	<copy css:content="#portal-globalnav" css:theme="#topnav" />
+	
+	<!-- Portal breadcrumb-->
+	<copy css:content="#portal-breadcrumbs" css:theme="#plone-breadcrumb" />
+	
+	<!-- Portal Column-->
+	<replace css:content="#portal-columns" css:theme="#conteudo-plone" />
+
+	<!-- Busca Rodape-->
+	<replace css:content="#portal-searchbox" css:theme="#footer-busca" />
+
+</rules>
