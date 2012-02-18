@@ -11,10 +11,12 @@
   <includeDependencies package="." />
   <include file="skins.zcml" />
 
-  <plone:static directory="static" type="theme" />
-
+ 
   <!-- Grok the package to initialise schema interfaces and content classes -->
   <grok:grok package="." />
+   
+  <plone:static directory="static" type="theme" />
+  
   
   <i18n:registerTranslations directory="locales" />
 

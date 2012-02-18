@@ -1,0 +1,117 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="cabinformatica.skin">
+
+
+	<head>
+		<metal:js fill-slot="javascript_head_slot">
+			<script type="text/javascript" tal:attributes="src string:${context/portal_url}/scripts/jquery.easing.1.3.js"></script>
+			<script type="text/javascript" tal:attributes="src string:${context/portal_url}/scripts/jquery.hoverIntent.js"></script>
+			<script type="text/javascript" tal:attributes="src string:${context/portal_url}/scripts/jquery.hslides.1.0.js"></script>
+			<script type="text/javascript" tal:attributes="src string:${context/portal_url}/scripts/jquery.hslides.setup.js"></script>
+		</metal:js>
+		
+		<metal:css fill-slot="style_slot">
+			<link rel="stylesheet" tal:attributes="href string:${context/portal_url}/featured_slide.css" type="text/css" />
+			
+		</metal:css>
+	</head>
+<body >
+	<metal:main fill-slot="content">
+		<!-- ####################################################################################################### -->
+		<div id="featured_slide">
+		  <div class="featured_content">
+		      <ul id="accordion">
+		      	<tal:def define="news view/get_Noticias| python:[]">
+		      		<tal:rep repeat="item python:news[:5]">
+		      			<li tal:define="first repeat/item/start" 
+						tal:attributes="class python: first  and 'current' or ''" >
+				          <div class="featured_box">
+				            <h2 tal:content="item/Title|nothing">5. Aliquatjusto quisque nam</h2>
+				            <p tal:content="item/Description|nothing">Orcimagna rhoncus et a nec antesque sed temportor pellus nibh conseque.</p>
+				            <p class="readmore"><a href="#" tal:attributes="href item/absolute_url|nothing">Leia mais &raquo;</a></p>
+				          </div>
+				          <div class="featured_tab"> <img tal:condition="item/getImage|nothing"
+						  								  tal:attributes="src python: item.getImage().absolute_url() + '_thumb'"
+														  height="80px" width="80px" alt="" />
+						  							 
+													 <img tal:condition="not: item/getImage|nothing" 
+													 	  src="/tecnologia.jpg" height="100px" width="100px" alt="" />
+				            <!--p tal:content="python: item.Title()[:20]">Tabbed Navigation 1</p-->
+							<p tal:content="string: Destaque ${repeat/item/number}">Tabbed Navigation 1</p>
+				          </div>
+				        </li>	
+		      		</tal:rep>
+		      	</tal:def>
+		      </ul>
+		    </div>
+		 </div>
+		<!-- ####################################################################################################### -->
+		<div id="homecontent">
+			<div class="wrapper-home">			
+			  	<ul>
+					<tal:def define="outras_news view/get_Noticias| python:[]">
+				  		<tal:rep repeat="item python:outras_news[5:8]">
+							  <li>
+						        <h2 class="title"><img tal:condition="item/getImage|nothing"
+							  						  tal:attributes="src python: item.getImage().absolute_url() + '_tile'" 
+													  height="60px" width="60px" alt="" />
+							  					  
+												  <img tal:condition="not: item/getImage|nothing" 
+						        					   src="/tecnologia.jpg" alt=""  height="60px" width="60px"/>
+												  
+												  <span tal:content="item/Title|nothing">Nullamlacus dui ipsum conseque loborttis</span></h2>
+						        <p  style="margin-top: 10px;" tal:content="item/Description|nothing"> Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+						        <p class="readmore"><a href="#" tal:attributes="href item/absolute_url|nothing">Leia mais &raquo;</a></p>
+						      </li>			
+						</tal:rep>	
+				  	</tal:def>
+			    </ul>
+			</div>
+		    <br class="clear" />
+		</div>
+		<!-- ####################################################################################################### -->
+		<div id="container-text">
+			<div class="wrapper-home">
+			  	<tal:def define="obj view/get_text_frontpage|nothing">
+				    <div id="content-text" tal:condition="obj">
+				      <h2 tal:content="obj/Title|nothing">About This Free CSS Template</h2>
+				      <p tal:content="structure obj/getText|nothing">Sedsemporttis sit intesque felit quis elis et cursuspenatibulum tincidunt non curabitae.</p>
+				    </div>		  		
+			  	</tal:def>
+
+			    <div id="column">
+			      <div class="holder">
+			      	<tal:def define="obj view/get_last_Sites|nothing">
+			      		<tal:cond condition="obj">
+			      			<h2 tal:content="obj/Title|nothing">Últimos Serviços</h2>
+							<p tal:replace="structure obj/getText|nothing" />
+
+			      		</tal:cond>
+						<tal:cond condition="not: obj">
+			      			<h2 >Últimos Serviços</h2>
+					        <ul id="latestnews">
+					          <li> <img class="imgl" src="/tecnologia.jpg" alt="" />
+					            <p><strong><a href="#">Indonectetus facilis leo.</a></strong></p>
+					            <p>Nullamlacus dui ipsum cons eque loborttis non euis que morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque.</p>
+					          </li>
+					          <li class="last"> <img class="imgl" src="/tecnologia.jpg" alt="" />
+					            <p><strong><a href="#">Indonectetus facilis leo.</a></strong></p>
+					            <p>Nullamlacus dui ipsum cons eque loborttis non euis que morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque.</p>
+					          </li>
+					        </ul>
+			      		</tal:cond>
+					</tal:def>
+			      </div>
+			    </div>
+			</div>
+		    <br class="clear" />
+		</div>
+		<!-- ####################################################################################################### -->
+	</metal:main>
+</body>
+</html>

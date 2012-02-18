@@ -1,10 +1,10 @@
 // Override default settings
 $((function () {
     $('#accordion').hSlides({
-        totalWidth: 920,
+        totalWidth: 900,
         totalHeight: 300,
-        minPanelWidth: 111,
-        maxPanelWidth: 476,
+        minPanelWidth: 107,
+        maxPanelWidth: 471,
 		easing: "easeOutBack",
 		activeClass: 'current'
     });
