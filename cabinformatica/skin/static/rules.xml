@@ -4,10 +4,8 @@
 	   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<!-- Prevent theme usage in zmi -->
-    <rules css:if-content="#visual-portal-wrapper">
-	
-		<theme href="theme.html" />
-	</rules>
+    
+	<theme href="theme.html" css:if-content="#visual-portal-wrapper"/>
     
 	<!-- Pull in Plone CSS -->
     <prepend theme="/html/head" 
