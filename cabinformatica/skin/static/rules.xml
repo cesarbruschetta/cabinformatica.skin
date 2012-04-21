@@ -32,4 +32,7 @@
 	<!-- Busca Rodape-->
 	<replace css:content="#portal-searchbox" css:theme="#footer-busca" />
 
+	<!-- Add in any inline scripts, like Google Analytics --> 
+    <after theme-children="/html/body" content="/html/body/div[@id='visual-portal-wrapper']/div/script" /> 
+
 </rules>
