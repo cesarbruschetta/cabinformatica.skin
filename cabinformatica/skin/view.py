@@ -17,7 +17,7 @@ from Products.CMFCore.interfaces import ISiteRoot
 class HomePageView(grok.View):
     grok.context(ISiteRoot)
     grok.require('zope2.View')
-    grok.name('home-page-portal')
+    grok.name('home-page')
     
     def get_Noticias(self):    
         local = self.context.getPhysicalPath()
