@@ -3,14 +3,21 @@ from five import grok
 from zope import schema
 
 from Products.CMFCore.utils import getToolByName
-from zope.app.component.hooks import getSite 
+
+try:
+ # Plone < 4.3
+ from zope.app.component.hooks import getSite
+except ImportError:
+ # Plone >= 4.3
+ from zope.component.hooks import getSite  # NOQA
+
 from Products.CMFCore.interfaces import ISiteRoot
 
 
 class HomePageView(grok.View):
     grok.context(ISiteRoot)
     grok.require('zope2.View')
-    grok.name('home-page')
+    grok.name('home-page-portal')
     
     def get_Noticias(self):    
         local = self.context.getPhysicalPath()
